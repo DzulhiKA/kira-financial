@@ -150,15 +150,15 @@ export default function HomePage() {
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center gap-4 animate-fade-up"
           style={{ animationDelay: '0.3s', opacity: 0 }}>
-          <Link href="/register"
+          <a href="/register"
             className="btn-gold px-8 py-4 rounded-sm font-display font-semibold tracking-widest text-sm flex items-center gap-2 group">
             Start with KIRA
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-          </Link>
-          <Link href="/login"
+          </a>
+          <a href="/login"
             className="btn-outline-gold px-8 py-4 rounded-sm font-display font-semibold tracking-widest text-sm">
             Sign In
-          </Link>
+          </a>
         </div>
       </section>
 
