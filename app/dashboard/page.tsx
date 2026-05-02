@@ -256,7 +256,7 @@ export default function DashboardPage() {
                     <Receipt size={16} className="text-kira-gold" />
                     <div>
                       <p className="text-xs font-semibold text-kira-cream">Budget Tracker</p>
-                      <p className="text-xs text-kira-cream-dim/50">Catat & lacak pengeluaran</p>
+                      <p className="text-xs text-kira-cream-dim/50">Log & track expenses</p>
                     </div>
                   </Link>
                   <Link href="/onboarding" className="flex items-center gap-3 p-3 rounded-sm hover:bg-kira-gold/5 transition-colors group">
@@ -304,19 +304,19 @@ export default function DashboardPage() {
         {/* Transaction Widget */}
         <div className="mt-6 glass-card p-5 rounded-sm">
           <div className="flex items-center justify-between mb-4">
-            <p className="text-xs font-mono text-kira-gold tracking-widest uppercase">Transaksi Bulan Ini</p>
-            <Link href="/transactions" className="text-xs font-mono text-kira-cream-dim/50 hover:text-kira-gold transition-colors tracking-widest">Lihat Semua →</Link>
+            <p className="text-xs font-mono text-kira-gold tracking-widest uppercase">This Month's Transactions</p>
+            <Link href="/transactions" className="text-xs font-mono text-kira-cream-dim/50 hover:text-kira-gold transition-colors tracking-widest">View All →</Link>
           </div>
           {/* Mini summary */}
           <div className="grid grid-cols-2 gap-3 mb-4">
             <div className="bg-green-500/5 border border-green-500/20 rounded-sm p-3 text-center">
-              <p className="text-[10px] font-mono text-green-400/70 tracking-widest uppercase mb-1">Pemasukan</p>
+              <p className="text-[10px] font-mono text-green-400/70 tracking-widest uppercase mb-1">Income</p>
               <p className="text-sm font-mono font-bold text-green-400">
                 {new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(txSummary.totalIncome)}
               </p>
             </div>
             <div className="bg-red-500/5 border border-red-500/20 rounded-sm p-3 text-center">
-              <p className="text-[10px] font-mono text-red-400/70 tracking-widest uppercase mb-1">Pengeluaran</p>
+              <p className="text-[10px] font-mono text-red-400/70 tracking-widest uppercase mb-1">Expenses</p>
               <p className="text-sm font-mono font-bold text-red-400">
                 {new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(txSummary.totalExpense)}
               </p>
@@ -327,7 +327,7 @@ export default function DashboardPage() {
             <Link href="/transactions"
               className="flex items-center justify-center gap-2 p-4 border border-dashed border-kira-gold/20 rounded-sm text-kira-cream-dim/40 hover:border-kira-gold/40 hover:text-kira-cream-dim transition-all">
               <Receipt size={14} />
-              <span className="text-xs font-mono tracking-widest">Belum ada transaksi — klik untuk mencatat</span>
+              <span className="text-xs font-mono tracking-widest">No transactions yet — click to log</span>
             </Link>
           ) : (
             <div className="space-y-2">
